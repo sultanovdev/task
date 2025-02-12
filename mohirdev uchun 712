@@ -1,0 +1,51 @@
+//aytilgan class
+
+package md;
+
+public class MathFunctions {
+    private double p;
+    private double e;
+
+    public MathFunctions(double p, double e) {
+        this.p = p;
+        this.e = e;
+    }
+
+    public MathFunctions() {
+    }
+
+    public double calculateCircleArea(double radius) {
+        return p * radius * radius;
+    }
+
+    public double calculateTriangleArea(double a, double b, double c) {
+        double s = (a + b + c) / 2;
+        return Math.sqrt(s * (s - a) * (s - b) * (s - c));
+    }
+
+    public double daraja(double number){
+        return Math.pow(e,number);
+    }
+
+}
+
+
+//mainda run qilish uchun class
+
+package md;
+
+public class Main {
+    public static void main(String[] args) {
+        MathFunctions mathFunctions = new MathFunctions(3.14159265359, 2.71828182846);
+
+
+        System.out.println("Doira yuzasi: " + mathFunctions.calculateCircleArea(5));
+
+
+        System.out.println("e ning 2-darajasi: " + mathFunctions.daraja(2));
+
+        System.out.println("Uchburchak yuzasi: " + mathFunctions.calculateTriangleArea(3, 4, 5));
+    }
+}
+
+
